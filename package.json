@@ -1,7 +1,7 @@
 {
 	"name": "wiki-ipsum-site",
 	"version": "0.1.0",
-	"homepage": "https://myusername.github.io",
+	"homepage": "https://coelacanth7.github.io/wiki-ipsum-site/",
 	"private": true,
 	"dependencies": {
 		"ajv": "^6.2.1",
