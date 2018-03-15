@@ -31,7 +31,9 @@ let wikiIpsum = (() => {
 let getWikiText = (() => {
 	var _ref2 = _asyncToGenerator(function*() {
 		try {
-			response = yield fetch("https://en.wikipedia.org/wiki/Special:Random");
+			response = yield fetch(
+				"https://crossorigin.me/https://en.wikipedia.org/wiki/Special:Random"
+			);
 			const articleTitle = response.url.substring(30);
 			let apiJson = yield fetch(`${baseQuery}${articleTitle}`);
 			apiJson = yield apiJson.json();
@@ -83,7 +85,7 @@ function _asyncToGenerator(fn) {
 let response;
 
 const baseQuery =
-	"https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=";
+	"https://crossorigin.me/https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=";
 
 const WordCount = str => str.split(" ").length;
 
