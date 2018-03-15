@@ -31,8 +31,9 @@ let wikiIpsum = (() => {
 let getWikiText = (() => {
 	var _ref2 = _asyncToGenerator(function*() {
 		try {
-			response = yield fetch("https://en.wikipedia.org/wiki/Special:Random");
-			const articleTitle = response.url.substring(30);
+			response = yield fetch(randomPageUrl);
+			console.log(response);
+			const articleTitle = response.query.random[0].title;
 			let apiJson = yield fetch(`${baseQuery}${articleTitle}`);
 			apiJson = yield apiJson.json();
 			console.log("apiJson", apiJson);
@@ -82,6 +83,8 @@ function _asyncToGenerator(fn) {
 
 let response;
 
+const randomPageUrl =
+	"https://en.wikipedia.org/w/api.php?action=query&list=random&rnlimit=1&format=json&origin=https://limitless-beyond-33689.herokuapp.com/";
 const baseQuery =
 	"https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=";
 
