@@ -84,7 +84,7 @@ function _asyncToGenerator(fn) {
 let response;
 
 const randomPageUrl =
-	"https://en.wikipedia.org/w/api.php?action=query&list=random&rnlimit=1&format=json&origin=https://limitless-beyond-33689.herokuapp.com/";
+	"https://en.wikipedia.org/w/api.php?action=query&list=random&rnlimit=1&format=json&origin=*";
 const baseQuery =
 	"https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=";
 
