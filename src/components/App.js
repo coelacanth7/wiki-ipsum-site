@@ -1,4 +1,5 @@
 import React from "react";
+import InputBox from "./InputBox";
 
 const App = ({ isFetching, error, wikiText }) => {
 	return (
@@ -10,6 +11,7 @@ const App = ({ isFetching, error, wikiText }) => {
 				</h4>
 				<hr />
 			</header>
+			<InputBox wikiText={wikiText} />
 			<article className="textbox">
 				<p className="wikiText">{wikiText}</p>
 			</article>

@@ -193,8 +193,30 @@ body {
 	-webkit-border-radius: 5px 5px 5px 5px;
 }
 
+.input-box {
+	position: absolute;
+	top: 165px;
+	left: 16px;
+}
+
+.button {
+	margin-left: 20px;
+	padding: 10px;
+	border: 0px;
+	font-size: 16px;
+	background-color: darkgray;
+	font-style: italic;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: white;
+	border-bottom: 4px solid rgba(190, 227, 250, 1);
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+}
+
 .wikiText {
-	padding-top: 40px;
+	padding-top: 50px;
 }
 
 p {
