@@ -195,7 +195,7 @@ body {
 
 .input-box {
 	position: absolute;
-	top: 165px;
+	top: 160px;
 	left: 16px;
 }
 
@@ -203,7 +203,7 @@ body {
 	margin-left: 20px;
 	padding: 10px;
 	border: 0px;
-	font-size: 16px;
+	font-size: 20px;
 	background-color: darkgray;
 	font-style: italic;
 	text-transform: uppercase;
@@ -216,7 +216,7 @@ body {
 }
 
 .wikiText {
-	padding-top: 50px;
+	padding-top: 60px;
 }
 
 p {
