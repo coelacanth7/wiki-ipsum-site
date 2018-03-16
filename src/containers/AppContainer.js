@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import App from "../components/App";
-import wikiIpsum from "wiki-ipsum";
+import wikiIpsum from "../lib/wikiIpsum";
 
 class AppContainer extends Component {
 	constructor() {

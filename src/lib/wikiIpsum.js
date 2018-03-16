@@ -34,17 +34,13 @@ async function wikiIpsum(max) {
 
 async function getWikiText() {
 	try {
-		response = await request(
-			"https://en.wikipedia.org/w/api.php?action=query&list=random&rnlimit=1&format=json&origin=*"
-		);
+		response = await request(titles);
 		let articleTitle = JSON.parse(response.body).query.random[0].title;
 		if (!articleTitle) return "";
-		console.log("articleTitle", articleTitle);
 		const apiJson = await request(`${baseQuery}${articleTitle}`);
 		const parsed = JSON.parse(apiJson.body).query.pages;
 		const text = Object.values(parsed)[0].extract.replace(/^\s+|\s+$/g, "");
 		if (text === "" || !text) return "";
-		console.log("text", text);
 		return text.replace(/\s\s/g, "");
 	} catch (error) {
 		console.error(error);
