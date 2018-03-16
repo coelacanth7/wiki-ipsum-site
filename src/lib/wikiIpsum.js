@@ -3,6 +3,8 @@ let request = require("async-request"),
 
 const baseQuery =
 	"https://en.wikipedia.org/w/api.php?format=json&origin=*&action=query&prop=extracts&exintro=&explaintext=&titles=";
+const titles =
+	"https://en.wikipedia.org/w/api.php?action=query&list=random&rnlimit=1&format=json&origin=*";
 
 const WordCount = str => str.split(" ").length;
 

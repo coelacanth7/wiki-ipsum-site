@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import App from "../components/App";
-import wikiIpsum from "../lib/wikiIpsum";
+import wikiIpsum from "wiki-ipsum";
 
 class AppContainer extends Component {
 	constructor() {
@@ -14,7 +14,8 @@ class AppContainer extends Component {
 
 	componentDidMount() {
 		this.setState({ isFetching: true });
-		wikiIpsum(200)
+
+		wikiIpsum()
 			.then(wikiText => {
 				this.setState({ wikiText, isFetching: false });
 				console.log("wikiText", wikiText);
@@ -23,7 +24,8 @@ class AppContainer extends Component {
 				console.error(error);
 				this.setState({
 					wikiText: "There was an error, try again",
-					error: error
+					error: error,
+					isFetching: false
 				});
 			});
 	}
