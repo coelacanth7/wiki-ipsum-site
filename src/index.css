@@ -1,5 +1,243 @@
+/* Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* style */
+/* html {
+	height: 100%;
+} */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Merriweather", serif;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(
+		left,
+		#ffffff 0%,
+		#e5e5e5 100%
+	); /* FF3.6-15 */
+	background: -webkit-linear-gradient(
+		left,
+		#ffffff 0%,
+		#e5e5e5 100%
+	); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		to right,
+		#ffffff 0%,
+		#e5e5e5 100%
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(
+			startColorstr="#ffffff",
+			endColorstr="#e5e5e5",
+			GradientType=1
+		); /* IE6-9 */
+}
+
+.App-header {
+	margin: 20px;
+}
+
+.App-header h1 {
+	font-size: 50px;
+}
+
+.App-header h4 {
+	padding: 10px;
+	padding-left: 20px;
+	font-style: italic;
+}
+
+.textbox {
+	margin: 20px;
+	margin-left: 50px;
+	padding: 20px;
+	background-color: white;
+	-webkit-box-shadow: 4px 6px 13px -1px rgba(190, 227, 250, 1);
+	-moz-box-shadow: 4px 6px 13px -1px rgba(190, 227, 250, 1);
+	box-shadow: 4px 6px 13px -1px rgba(190, 227, 250, 1);
+	max-width: 800px;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+}
+
+.wikiText {
+	padding-top: 40px;
+}
+
+p {
+	padding: 15px 20px;
+	line-height: 2em;
+	font-size: 14px;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid rgba(190, 227, 250, 1);
+	margin: 1em 0;
+	padding: 0;
+}
+
+footer {
+	position: fixed;
+	font-family: "Work Sans", Arial, sans-serif;
+	font-size: 14px;
+	font-style: italic;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: white;
+	bottom: 0;
+	left: 30px;
+	padding: 5px;
+	background-color: darkgray;
+}
+footer a {
+	color: white;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+	.App-header {
+		display: block;
+		margin-top: 10px;
+		margin-left: 2px;
+	}
+
+	.wikiText {
+		margin-left: 10px;
+	}
 }
