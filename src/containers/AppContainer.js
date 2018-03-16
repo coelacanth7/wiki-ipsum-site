@@ -14,7 +14,7 @@ class AppContainer extends Component {
 
 	componentDidMount() {
 		this.setState({ isFetching: true });
-		wikiIpsum()
+		wikiIpsum(200)
 			.then(wikiText => {
 				this.setState({ wikiText, isFetching: false });
 				console.log("wikiText", wikiText);
