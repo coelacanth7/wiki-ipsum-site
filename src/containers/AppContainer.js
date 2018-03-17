@@ -9,7 +9,8 @@ class AppContainer extends Component {
 			isFetching: false,
 			error: null,
 			numParagraphs: 1,
-			wikiText: "lorem ipsum sit amet dolor"
+			wikiText:
+				"When it reaches the batter, the center of the cloud is still moving at an appreciable fraction of the speed of light. It hits the bat first, but then the batter, plate, and catcher are all scooped up and carried backward through the backstop as they disintegrate. The shell of x-rays and superheated plasma expands outward and upward, swallowing the backstop, both teams, the stands, and the surrounding neighborhood—all in the first microsecond."
 		};
 
 		this.onClickGenerateButton = this.onClickGenerateButton.bind(this);
@@ -23,7 +24,7 @@ class AppContainer extends Component {
 		console.log("calling");
 
 		for (var i = 0; i < numParagraphs; i++) {
-			if (!breakable) break;
+			if (!breakable || numParagraphs > 6) break;
 			console.log(numParagraphs);
 			wikiIpsum(60)
 				.then(wikiText => {
@@ -58,7 +59,7 @@ class AppContainer extends Component {
 	onChangeNumParagraphs(e) {
 		this.setState({ numParagraphs: e.target.value }, () => {
 			console.log(this.state.numParagraphs);
-			this.callForText();
+			// this.callForText();
 		});
 	}
 
