@@ -153,13 +153,13 @@ body {
 }
 
 .App-header h1 {
-	font-size: 50px;
+	font-size: 36px;
 }
 
 .App-header svg {
 	margin: 0;
 	padding: 0;
-	height: 80px;
+	height: 40px;
 	width: auto;
 }
 
@@ -276,8 +276,7 @@ body {
 }
 
 .wrapper {
-	padding-top: 50px;
-	height: 100vh;
+	padding-top: 30px;
 	font-size: 60px;
 }
 

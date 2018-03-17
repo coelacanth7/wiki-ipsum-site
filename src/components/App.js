@@ -28,12 +28,12 @@ const App = ({
 				onClickGenerateButton={onClickGenerateButton}
 				onChangeNumParagraphs={onChangeNumParagraphs}
 			/>
-			<article className="textbox">
+			{/* <article className="textbox">
 				<div className="wikiText">{wikiElements}</div>
 				<Clipboard className="button" data-clipboard-text={cleanWikiText}>
 					Copy Text
 				</Clipboard>
-			</article>
+			</article> */}
 			<footer>
 				<a href="https://github.com/coelacanth7">Created by coelacanth7</a>
 			</footer>
