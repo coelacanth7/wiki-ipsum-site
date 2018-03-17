@@ -199,6 +199,12 @@ body {
 	left: 16px;
 }
 
+.input-box select {
+	display: inline-block;
+	height: 50px;
+	font-size: 30px;
+}
+
 .button {
 	margin-left: 20px;
 	padding: 10px;

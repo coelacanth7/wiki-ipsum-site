@@ -1,7 +1,17 @@
 import React from "react";
 import InputBox from "./InputBox";
 
-const App = ({ isFetching, error, wikiText, onClickGenerateButton }) => {
+const App = ({
+	isFetching,
+	error,
+	wikiText,
+	onClickGenerateButton,
+	onChangeNumParagraphs
+}) => {
+	let wikiElements = wikiText
+		.split("&&&")
+		.map((paragraph, key) => <p key={key}>{paragraph}</p>);
+
 	return (
 		<div className="App">
 			<header className="App-header">
@@ -14,9 +24,10 @@ const App = ({ isFetching, error, wikiText, onClickGenerateButton }) => {
 			<InputBox
 				wikiText={wikiText}
 				onClickGenerateButton={onClickGenerateButton}
+				onChangeNumParagraphs={onChangeNumParagraphs}
 			/>
 			<article className="textbox">
-				<p className="wikiText">{wikiText}</p>
+				<div className="wikiText">{wikiElements}</div>
 			</article>
 
 			<footer>
