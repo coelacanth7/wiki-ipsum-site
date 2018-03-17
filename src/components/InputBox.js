@@ -25,7 +25,7 @@ const InputBox = ({
 				</select>
 			</span> */}
 
-			<FancySelect />
+			<FancySelect onChangeNumParagraphs={onChangeNumParagraphs} />
 
 			<br />
 

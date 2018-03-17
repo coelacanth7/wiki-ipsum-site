@@ -25,16 +25,12 @@ class AppContainer extends Component {
 
 		for (var i = 0; i < numParagraphs; i++) {
 			if (!breakable || numParagraphs > 6) break;
-			console.log(numParagraphs);
 			wikiIpsum(60)
 				.then(wikiText => {
 					this.setState({
 						wikiText: this.state.wikiText + "&&&" + wikiText
 					});
-					console.log("wikiText", wikiText);
-					if (i === numParagraphs) {
-						this.setState({ isFetching: false });
-					}
+					if (i === numParagraphs) this.setState({ isFetching: false });
 				})
 				.catch(error => {
 					console.error(error);
@@ -48,17 +44,13 @@ class AppContainer extends Component {
 		}
 	}
 
-	componentDidMount() {
-		// this.callForText();
-	}
-
 	onClickGenerateButton() {
 		this.callForText();
 	}
 
-	onChangeNumParagraphs(e) {
-		this.setState({ numParagraphs: e.target.value }, () => {
-			console.log(this.state.numParagraphs);
+	onChangeNumParagraphs(num) {
+		this.setState({ numParagraphs: num }, () => {
+			console.log("this.state.numParagraphs", this.state.numParagraphs);
 			// this.callForText();
 		});
 	}
