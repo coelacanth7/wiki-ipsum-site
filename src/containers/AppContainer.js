@@ -9,8 +9,7 @@ class AppContainer extends Component {
 			isFetching: false,
 			error: null,
 			numParagraphs: 1,
-			wikiText:
-				"When it reaches the batter, the center of the cloud is still moving at an appreciable fraction of the speed of light. It hits the bat first, but then the batter, plate, and catcher are all scooped up and carried backward through the backstop as they disintegrate. The shell of x-rays and superheated plasma expands outward and upward, swallowing the backstop, both teams, the stands, and the surrounding neighborhood—all in the first microsecond."
+			wikiText: ""
 		};
 
 		this.onClickGenerateButton = this.onClickGenerateButton.bind(this);

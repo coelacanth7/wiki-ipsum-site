@@ -7,7 +7,8 @@ class FancySelect extends Component {
 		this.state = {
 			displayList: false,
 			selection: null,
-			number: 1
+			number: 1,
+			paragraphs: "paragraphs"
 		};
 
 		this.onChangeNumParagraphs = props.onChangeNumParagraphs;
@@ -21,11 +22,12 @@ class FancySelect extends Component {
 	}
 
 	onClickSelection(e) {
-		console.log(e.target.id);
 		this.setState(
 			{ selection: e.target.name, number: e.target.id, displayList: false },
 			() => {
-				console.log(this.state.selection);
+				Number(this.state.number) === 1
+					? (this.state.paragraphs = "paragraph")
+					: (this.state.paragraphs = "paragraphs");
 				this.onChangeNumParagraphs(this.state.number);
 			}
 		);
@@ -44,7 +46,7 @@ class FancySelect extends Component {
 				value="1"
 				className="placeholder"
 			>
-				select
+				<span className="select">select</span>
 			</span>
 		);
 
@@ -75,7 +77,7 @@ class FancySelect extends Component {
 						</li>
 					</ul>
 				</div>{" "}
-				paragraphs
+				{this.state.paragraphs}
 			</div>
 		);
 	}
