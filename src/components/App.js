@@ -9,17 +9,17 @@ const App = ({
 	isFetching,
 	error,
 	wikiText,
-	onClickGenerateButton,
-	onChangeNumParagraphs
+	onChangeNumParagraphs,
+	onClickStartAgain
 }) => {
 	let textDisplayBool = isFetching || wikiText.length ? false : true;
+	if (wikiText.length === 0) document.body.style.backgroundColor = null;
 
 	return (
 		<div className="App">
 			<Header textDisplayBool={textDisplayBool} />
 			<InputBox
 				wikiText={wikiText}
-				onClickGenerateButton={onClickGenerateButton}
 				onChangeNumParagraphs={onChangeNumParagraphs}
 				textDisplayBool={textDisplayBool}
 			/>
@@ -27,6 +27,7 @@ const App = ({
 				isFetching={isFetching}
 				wikiText={wikiText}
 				textDisplayBool={textDisplayBool}
+				onClickStartAgain={onClickStartAgain}
 			/>
 			<Footer />
 		</div>

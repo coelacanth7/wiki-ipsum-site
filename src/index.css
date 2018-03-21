@@ -145,7 +145,7 @@ body {
 	background: #32dbf5;
 }
 
-.App-header {
+header {
 	margin: 20px;
 	text-align: center;
 	color: white;
@@ -263,7 +263,8 @@ body {
 	width: 100%;
 }
 
-select {
+select,
+.button {
 	display: inline;
 	border: 0;
 	width: auto;
@@ -292,30 +293,35 @@ select option {
 	cursor: pointer;
 	color: lightgrey;
 }
-.placeholder:hover {
+.placeholder:hover,
+.button:hover {
 	color: #7d40bf;
 }
 
+/* end fancy button */
+
 .button {
-	margin-left: 20px;
 	padding: 10px;
 	border: 0px;
-	font-size: 20px;
-	background-color: darkgray;
-	font-style: italic;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	color: white;
+	font-size: 52px;
+	font-family: "Playfair Display", sans-serif;
+	color: #32dbf5;
+	text-align: center;
 }
 
-.wikiText {
-	padding-top: 60px;
+.textbox {
+	max-width: 800px;
+	margin: 0 auto 35px;
+	color: #333333;
 }
 
 p {
-	padding: 15px 20px;
+	padding: 15px 10px 15px 10px;
 	line-height: 2em;
 	font-size: 14px;
+	font-size: 22px;
+	line-height: 31px;
+	text-align: left;
 }
 
 footer {

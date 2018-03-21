@@ -9,11 +9,12 @@ class AppContainer extends Component {
 			isFetching: false,
 			error: null,
 			numParagraphs: 1,
-			wikiText: ""
+			wikiText:
+				"The the Way disobeys, the gom jabbar topples. The courtesan disciplines as if politics declares. Paradise sets the enduring question. The enemy believes the significant wife, whether wound when greatness. Duel prepares before the mnemonic total obliteration over the Irulan learns accepts. Spit befalls the incomplete tension unless Rabban threatens religious meteor. &&& The Shadout threatens, the water bond controls the false greenhouse. Doubt rages not only shout. And shield disobeys the Bene Gesserit, except shigawire hunter-seeker emerges. Off maula after perception, beyond fremkit while the fear. &&& Upper heir slips beside prana wherever seduction flounders. The water-fat saves, the harvester strums the free gift. The the Way disobeys, the gom jabbar topples. The courtesan disciplines as if politics declares. Paradise sets the enduring question. The enemy believes the significant wife, whether wound when greatness. Duel prepares before the mnemonic total obliteration over the Irulan learns accepts. Spit befalls the incomplete tension unless Rabban threatens religious meteor. &&& The Shadout threatens, the water bond controls the false greenhouse. Doubt rages not only shout. And shield disobeys the Bene Gesserit, except shigawire hunter-seeker emerges. Off maula after perception, beyond fremkit while the fear. Upper heir slips beside prana wherever seduction flounders. The water-fat saves, the harvester strums the free gift."
 		};
 
-		this.onClickGenerateButton = this.onClickGenerateButton.bind(this);
 		this.onChangeNumParagraphs = this.onChangeNumParagraphs.bind(this);
+		this.onClickStartAgain = this.onClickStartAgain.bind(this);
 	}
 
 	callForText() {
@@ -43,10 +44,6 @@ class AppContainer extends Component {
 		}
 	}
 
-	onClickGenerateButton() {
-		this.callForText();
-	}
-
 	onChangeNumParagraphs(num) {
 		this.setState({ numParagraphs: num }, () => {
 			console.log("this.state.numParagraphs", this.state.numParagraphs);
@@ -54,12 +51,16 @@ class AppContainer extends Component {
 		});
 	}
 
+	onClickStartAgain() {
+		this.setState({ wikiText: "" });
+	}
+
 	render() {
 		return (
 			<App
 				{...this.state}
 				onChangeNumParagraphs={this.onChangeNumParagraphs}
-				onClickGenerateButton={this.onClickGenerateButton}
+				onClickStartAgain={this.onClickStartAgain}
 			/>
 		);
 	}

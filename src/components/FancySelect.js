@@ -16,8 +16,14 @@ class FancySelect extends Component {
 		this.onClickSelection = this.onClickSelection.bind(this);
 	}
 
-	onClickList(e) {
-		let el = e.target;
+	// componentWillMount() {
+	// 	document.body.style.backgroundColor = "green";
+	// }
+	// componentWillUnmount() {
+	// 	document.body.style.backgroundColor = null;
+	// }
+
+	onClickList() {
 		this.setState({ displayList: true });
 	}
 
@@ -26,8 +32,8 @@ class FancySelect extends Component {
 			{ selection: e.target.name, number: e.target.id, displayList: false },
 			() => {
 				Number(this.state.number) === 1
-					? (this.state.paragraphs = "paragraph")
-					: (this.state.paragraphs = "paragraphs");
+					? this.setState({ paragraphs: "paragraph" })
+					: this.setState({ paragraphs: "paragraphs" });
 				this.onChangeNumParagraphs(this.state.number);
 			}
 		);
