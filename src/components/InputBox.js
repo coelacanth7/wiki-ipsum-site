@@ -14,14 +14,7 @@ const InputBox = ({
 			<h2 id="description-text">
 				a lorem ipsum generator with dynamically generated text from wikipedia
 			</h2>
-
 			<FancySelect onChangeNumParagraphs={onChangeNumParagraphs} />
-
-			<br />
-
-			{/* <button className="button" onClick={onClickGenerateButton}>
-				Generate
-			</button> */}
 		</div>
 	);
 };

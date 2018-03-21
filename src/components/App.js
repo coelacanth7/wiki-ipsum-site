@@ -13,7 +13,7 @@ const App = ({
 	onClickStartAgain
 }) => {
 	let textDisplayBool = isFetching || wikiText.length ? false : true;
-	if (wikiText.length === 0) document.body.style.backgroundColor = null;
+	if (textDisplayBool) document.body.style.backgroundColor = null;
 
 	return (
 		<div className="App">

@@ -302,8 +302,8 @@ select option {
 
 .button {
 	padding: 10px;
-	border: 0px;
-	font-size: 52px;
+	border: 0;
+	font-size: 40px;
 	font-family: "Playfair Display", sans-serif;
 	color: #32dbf5;
 	text-align: center;
@@ -343,4 +343,26 @@ footer a {
 }
 
 @media screen and (max-width: 500px) {
+	footer {
+		left: 0;
+	}
+
+	p {
+		font-size: 18px;
+	}
+
+	.button {
+		font-size: 22px;
+		background-color: none;
+	}
+
+	.wrapper,
+	.list a {
+		font-size: 32px;
+	}
+
+	#description-text {
+		font-size: 36px;
+		margin-bottom: 54px;
+	}
 }
