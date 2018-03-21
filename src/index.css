@@ -292,10 +292,10 @@ select option {
 	padding: 10px;
 	border: 0;
 	font-size: 40px;
-	/* font-weight: 700; */
 	font-family: "Roboto", sans-serif;
 	color: #0bb1b9;
 	text-align: center;
+	background: none;
 }
 
 .textbox {
