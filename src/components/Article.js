@@ -11,13 +11,13 @@ const Article = ({ wikiText, isFetching, onClickStartAgain }) => {
 
 	let cleanWikiText = wikiText.replace("&&&", " ");
 
-	document.body.style.backgroundColor = "white";
+	document.body.style.backgroundColor = "#fff";
 
 	return (
 		<article className="textbox">
 			<div className="wikiText">
 				<ReactCSSTransitionGroup
-					transitionName="example"
+					transitionName="text"
 					transitionAppear={true}
 					transitionAppearTimeout={2000}
 					transitionEnter={false}

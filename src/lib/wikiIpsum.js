@@ -40,11 +40,9 @@ async function wikiIpsum(max) {
 async function getWikiText() {
 	try {
 		response = await request(titles);
-		console.log(response);
 		let articleTitle = response.data.query.random[0].title;
 		if (!articleTitle) return "";
 		const apiJson = await request(`${baseQuery}${articleTitle}`);
-		console.log(apiJson);
 		const parsed = apiJson.data.query.pages;
 		if (Object.values(parsed)[0].extract === undefined) return false;
 		const text = Object.values(parsed)[0].extract.replace(/^\s+|\s+$/g, "");

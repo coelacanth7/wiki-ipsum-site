@@ -50,11 +50,15 @@ class FancySelect extends Component {
 		);
 
 		return (
-			<div className="wrapper typo">
-				<div className="list">
+			<div className="wrapper typo transition">
+				<div className="list ">
 					{selection}
 
-					<ul style={{ display: displayList }} className="list__ul">
+					<ul
+						style={{ display: displayList }}
+						id="list__ul"
+						className="list__ul"
+					>
 						<li>
 							<a onClick={this.onClickSelection} id="1" name="one">
 								one

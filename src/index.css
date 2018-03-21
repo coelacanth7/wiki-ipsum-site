@@ -134,15 +134,12 @@ table {
 
 /* style */
 
-/* html {
-	height: 100%;
-} */
-
 body {
 	margin: 0;
 	padding: 0;
 	font-family: "Merriweather", serif;
-	background: #32dbf5;
+	background: #0bb1b9;
+	text-align: center;
 }
 
 header {
@@ -188,27 +185,20 @@ h4 {
 /* =========
 fancy select
 ========= */
+/* inspired by this: https://codepen.io/afalchi82/pen/aNXjgb
+adapted to react */
 
 .typo,
 .list a {
 	font-size: 60px;
 	font-weight: 700;
-	font-family: "Playfair Display", sans-serif;
+	font-family: "Roboto", sans-serif;
 	color: white;
 	text-decoration: none;
 }
 .typo option,
 .list a option {
 	font-size: 30px;
-}
-
-.transition {
-	-webkit-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
-}
-
-body {
-	text-align: center;
 }
 
 .wrapper {
@@ -235,13 +225,11 @@ body {
 .list li {
 	list-style: none;
 }
-.list li:first-child a {
-	color: #7d40bf;
-}
+
 .list a {
 	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
-	color: #7b00ff;
+	color: #d80afc;
 	position: relative;
 }
 .list a:after {
@@ -250,14 +238,14 @@ body {
 	height: 5px;
 	width: 0;
 	left: 0;
-	background: #b066ff;
+	background: #ff7600;
 	bottom: 0;
 	-webkit-transition: all 0.4s ease-out;
 	transition: all 0.4s ease-out;
 }
 .list a:hover {
 	cursor: pointer;
-	color: #b066ff;
+	color: #ff7600;
 }
 .list a:hover:after {
 	width: 100%;
@@ -273,7 +261,7 @@ select,
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	border-bottom: 2px solid #555;
-	color: #7b00ff;
+	color: #d80afc;
 	-webkit-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 }
@@ -295,7 +283,7 @@ select option {
 }
 .placeholder:hover,
 .button:hover {
-	color: #7d40bf;
+	color: #d80afc;
 }
 
 /* end fancy button */
@@ -304,8 +292,9 @@ select option {
 	padding: 10px;
 	border: 0;
 	font-size: 40px;
-	font-family: "Playfair Display", sans-serif;
-	color: #32dbf5;
+	/* font-weight: 700; */
+	font-family: "Roboto", sans-serif;
+	color: #0bb1b9;
 	text-align: center;
 }
 
@@ -326,80 +315,35 @@ p {
 
 footer {
 	position: fixed;
-	font-family: "Work Sans", Arial, sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 	font-style: italic;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: white;
 	bottom: 0;
-	left: 30px;
-	padding: 5px;
+	left: 60px;
+	padding: 8px;
 	background-color: darkgray;
 }
+
 footer a {
 	color: white;
 	text-decoration: none;
 }
 
 /* css transition group */
-.example-enter {
+
+.text-appear {
 	opacity: 0.01;
 }
 
-.example-enter.example-enter-active {
+.text-appear.text-appear-active {
 	opacity: 1;
-	transition: opacity 500ms ease-in;
+	transition: opacity 1s ease-in;
 }
 
-.example-leave {
-	opacity: 1;
-}
-
-.example-leave.example-leave-active {
-	opacity: 0.01;
-	transition: opacity 300ms ease-in;
-}
-
-.example-appear {
-	opacity: 0.01;
-}
-
-.example-appear.example-appear-active {
-	opacity: 1;
-	transition: opacity 0.5s ease-in;
-}
-
-.todo-item {
-	width: 100px;
-	height: 100px;
-	background-color: red;
-	float: left;
-	border: solid 2px white;
-	box-sizing: border-box;
-}
-
-.example-enter {
-	opacity: 0.01;
-	width: 0px;
-}
-
-.example-enter.example-enter-active {
-	opacity: 1;
-	width: 100px;
-	transition: 700ms;
-}
-
-.example-leave {
-	opacity: 1;
-	width: 100px;
-}
-
-.example-leave.example-leave-active {
-	opacity: 0.01;
-	width: 0px;
-	transition: 700ms;
-}
+/* mobile */
 
 @media screen and (max-width: 500px) {
 	footer {

@@ -23,7 +23,7 @@ class AppContainer extends Component {
 		console.log("calling");
 
 		for (var i = 0; i < numParagraphs; i++) {
-			if (!breakable || numParagraphs > 6) break;
+			if (breakable === false || numParagraphs > 6) break;
 			wikiIpsum(60)
 				.then(wikiText => {
 					this.setState({
@@ -45,7 +45,6 @@ class AppContainer extends Component {
 
 	onChangeNumParagraphs(num) {
 		this.setState({ numParagraphs: num }, () => {
-			console.log("this.state.numParagraphs", this.state.numParagraphs);
 			this.callForText();
 		});
 	}
