@@ -5,7 +5,8 @@ const InputBox = ({
 	wikiText,
 	onClickGenerateButton,
 	onChangeNumParagraphs,
-	textDisplayBool
+	textDisplayBool,
+	isFetching
 }) => {
 	if (!textDisplayBool) return null;
 

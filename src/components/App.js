@@ -12,7 +12,7 @@ const App = ({
 	onChangeNumParagraphs,
 	onClickStartAgain
 }) => {
-	let textDisplayBool = isFetching || wikiText.length ? false : true;
+	let textDisplayBool = isFetching === true || wikiText.length ? false : true;
 	if (textDisplayBool) document.body.style.backgroundColor = null;
 
 	return (
@@ -22,6 +22,7 @@ const App = ({
 				wikiText={wikiText}
 				onChangeNumParagraphs={onChangeNumParagraphs}
 				textDisplayBool={textDisplayBool}
+				isFetching={isFetching}
 			/>
 			<Article
 				isFetching={isFetching}

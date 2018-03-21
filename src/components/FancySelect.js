@@ -16,13 +16,6 @@ class FancySelect extends Component {
 		this.onClickSelection = this.onClickSelection.bind(this);
 	}
 
-	// componentWillMount() {
-	// 	document.body.style.backgroundColor = "green";
-	// }
-	// componentWillUnmount() {
-	// 	document.body.style.backgroundColor = null;
-	// }
-
 	onClickList() {
 		this.setState({ displayList: true });
 	}
@@ -60,12 +53,14 @@ class FancySelect extends Component {
 			<div className="wrapper typo">
 				<div className="list">
 					{selection}
+
 					<ul style={{ display: displayList }} className="list__ul">
 						<li>
 							<a onClick={this.onClickSelection} id="1" name="one">
 								one
 							</a>
 						</li>
+
 						<li>
 							<a onClick={this.onClickSelection} id="2" name="two">
 								two

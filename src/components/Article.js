@@ -1,5 +1,6 @@
 import React from "react";
 import Clipboard from "react-clipboard.js";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 const Article = ({ wikiText, isFetching, onClickStartAgain }) => {
 	if (wikiText.length === 0) return null;
@@ -14,7 +15,17 @@ const Article = ({ wikiText, isFetching, onClickStartAgain }) => {
 
 	return (
 		<article className="textbox">
-			<div className="wikiText">{wikiElements}</div>
+			<div className="wikiText">
+				<ReactCSSTransitionGroup
+					transitionName="example"
+					transitionAppear={true}
+					transitionAppearTimeout={2000}
+					transitionEnter={false}
+					transitionLeave={false}
+				>
+					{wikiElements}
+				</ReactCSSTransitionGroup>
+			</div>
 			<span>
 				<Clipboard className="button" data-clipboard-text={cleanWikiText}>
 					copy text
