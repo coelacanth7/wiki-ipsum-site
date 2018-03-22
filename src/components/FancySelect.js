@@ -33,8 +33,8 @@ class FancySelect extends Component {
 	}
 
 	render() {
-		let displayList = this.state.displayList ? "contents" : "none";
-		let displayPlaceholder = this.state.displayList ? "none" : "contents";
+		let displayList = this.state.displayList ? "inline-block" : "none";
+		let displayPlaceholder = this.state.displayList ? "none" : "inline-block";
 
 		let selection = this.state.selection ? (
 			this.state.selection
@@ -51,14 +51,9 @@ class FancySelect extends Component {
 
 		return (
 			<div className="wrapper typo transition">
-				<div className="list ">
-					{selection}
-
-					<ul
-						style={{ display: displayList }}
-						id="list__ul"
-						className="list__ul"
-					>
+				{selection}
+				<div className="list" style={{ display: displayList }}>
+					<ul id="list__ul" className="list__ul">
 						<li>
 							<a onClick={this.onClickSelection} id="1" name="one">
 								one
@@ -82,7 +77,7 @@ class FancySelect extends Component {
 						</li>
 					</ul>
 				</div>{" "}
-				{this.state.paragraphs}
+				<div className="paragraphs">{this.state.paragraphs}</div>
 			</div>
 		);
 	}
